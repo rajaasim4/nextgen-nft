@@ -1,0 +1,45 @@
+@import "../../App.scss";
+.Creators {
+  width: 100%;
+  background-color: black;
+  padding-top: 60px;
+  h2 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 121%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    color: #f2f2f2;
+    margin-bottom: 20px;
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 183%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #f0f0f0;
+    margin-bottom: 70px;
+  }
+  .Creators-main {
+    width: 90%;
+    margin: auto;
+    @include flexprop(space-evenly);
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 30px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .Creators {
+    .Creators-main {
+      align-items: center;
+    }
+    h2 {
+      font-size: 40px;
+    }
+  }
+}

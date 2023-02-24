@@ -1,0 +1,97 @@
+@import "../../App.scss";
+.Newsletter {
+  width: 100%;
+  background-color: black;
+  .Newsletter-main {
+    width: 90%;
+    margin: auto;
+    @include flexprop(space-evenly);
+  }
+  .Newsletter-left {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 40rem;
+      object-fit: contain;
+    }
+  }
+  .Newsletter-right {
+    width: 50%;
+    h2 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 121%;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      color: #f2f2f2;
+    }
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 183%;
+      letter-spacing: -0.02em;
+      color: #f0f0f0;
+    }
+    .Newsletter-subscribe {
+      background: rgba(134, 155, 223, 0.14);
+      border: 2px solid rgba(83, 84, 136, 0.4);
+      border-radius: 10px;
+      width: 90%;
+      height: 90px;
+      margin-top: 20px;
+      @include flexprop(space-between);
+      padding: 0px 30px;
+      input {
+        width: 70%;
+        outline: none;
+        padding: 10px 0px 10px 10px;
+        font-size: 18px;
+        color: white;
+        background-color: transparent;
+        border: none;
+      }
+      button {
+        @include gradientbuttoncss(none, true);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .Newsletter-main {
+    flex-direction: column;
+    .Newsletter-left {
+      width: 100%;
+    }
+    .Newsletter-right {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .Newsletter {
+    .Newsletter-right {
+      width: 100%;
+      h2 {
+        font-size: 40px;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        font-size: 16px;
+      }
+      .Newsletter-subscribe {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        height: max-content;
+        padding: 20px 0px;
+        justify-content: center;
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

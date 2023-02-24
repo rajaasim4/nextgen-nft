@@ -1,0 +1,45 @@
+@import "../../App.scss";
+
+.Collection {
+  width: 100%;
+  background-color: black;
+  padding: 90px 0px;
+  box-sizing: border-box;
+  h2 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 121%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $main-text-color;
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 183%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: $main-text-color;
+  }
+  .Collection-main {
+    width: 90%;
+    margin: auto;
+    @include flexprop(space-evenly);
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .Collection {
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}

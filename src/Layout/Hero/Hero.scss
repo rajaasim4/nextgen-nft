@@ -1,0 +1,158 @@
+@import "../../App.scss";
+.Hero {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  .Blur-effect {
+    width: 75vw;
+    height: 100%;
+    position: absolute;
+    left: -50%;
+    bottom: 0;
+    background: radial-gradient(
+      closest-side,
+      rgba(111, 26, 219, 0.4) 0%,
+      rgba(17, 17, 17, 0) 100%
+    );
+    filter: blur(20px);
+    border-radius: 50%;
+  }
+  .Hero-main {
+    padding-top: 60px;
+    width: 90%;
+    margin: auto;
+    @include flexprop(space-between);
+
+    .Hero-left {
+      width: 50%;
+
+      h1 {
+        font-weight: 900;
+        background: linear-gradient(180deg, #5c43f6 0%, #bc61f3 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-size: 76px;
+        line-height: 121%;
+        letter-spacing: 0.03em;
+        color: transparent;
+      }
+      p {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 183%;
+        letter-spacing: -0.02em;
+        color: #f0f0f0;
+      }
+      .Hero-btns {
+        margin-top: 30px;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        button:first-child {
+          @include gradientbuttoncss(none, true);
+          color: white;
+        }
+        button:last-child {
+          @include gradientbuttoncss(2px solid $text-color, false);
+        }
+      }
+    }
+    .Hero-right {
+      width: 46%;
+      height: 100%;
+      border-radius: 50%;
+      background: rgba(134, 155, 223, 0.08);
+      border: 4px solid rgba(83, 84, 136, 0.11);
+    }
+    .Hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .Brands {
+    width: 100%;
+    height: 160px;
+    margin-top: 80px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: relative;
+    .Brands-track {
+      display: flex;
+      width: calc(300px * 10);
+      animation: slideimages 30s linear infinite;
+      .Brands-img {
+        perspective: 100px;
+        width: 300px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+@keyframes slideimages {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 5));
+  }
+}
+@media screen and (max-width: 1024px) {
+  .Hero-left {
+    h1 {
+      font-size: 60px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .Hero {
+    .Hero-main {
+      flex-direction: column;
+      row-gap: 40px;
+      .Hero-left {
+        width: 100%;
+      }
+      .Hero-right {
+        width: 80%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .Hero {
+    .Hero-main {
+      .Hero-left {
+        h1 {
+          font-size: 50px;
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          font-size: 16px;
+        }
+        .Hero-btns {
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: center;
+          row-gap: 40px;
+          column-gap: 30px;
+        }
+      }
+      .Hero-right {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../App.scss";
+.CreatorsCard {
+  width: 300px;
+  height: 335px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  .CreatorsCard-bg {
+    height: 309px;
+    background: rgba(134, 155, 223, 0.14);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid rgba(83, 84, 136, 0.4);
+    border-radius: 20px;
+  }
+  .Creators-content {
+    height: 285px;
+
+    @include flexprop(space-between);
+    flex-direction: column;
+    img {
+      height: 180px;
+      width: 140px;
+      object-fit: cover;
+    }
+    h4 {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 121%;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      color: #f2f2f2;
+    }
+    button {
+      @include gradientbuttoncss(none, true);
+      color: white;
+      height: 50px;
+      cursor: pointer;
+      border-radius: 10px;
+      z-index: 3;
+    }
+  }
+}

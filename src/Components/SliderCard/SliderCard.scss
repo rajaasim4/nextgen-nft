@@ -1,0 +1,68 @@
+@import "../../App.scss";
+.SliderCard {
+  width: 420px;
+  height: 618px;
+  box-sizing: border-box;
+  background-color: black;
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  .SliderCard-bg {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 85%;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .SliderCard-top-content {
+    width: 90%;
+    padding: 0px 30px;
+    box-sizing: border-box;
+    // width: 4A40px;
+    height: 180px;
+    background: $main-text-color;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    z-index: 2;
+    .Slider-details {
+      padding-top: 10px;
+      width: 100%;
+      margin: auto;
+      @include flexprop(space-between);
+      flex-wrap: wrap;
+      span {
+        font-weight: 800;
+      }
+    }
+    p {
+      display: flex;
+      column-gap: 10px;
+
+      align-items: center;
+    }
+
+    button {
+      @include gradientbuttoncss(none, true);
+      border-radius: 15px;
+      width: 90%;
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .SliderCard {
+    width: 75%;
+    .SliderCard-top-content {
+      width: 100%;
+    }
+  }
+}

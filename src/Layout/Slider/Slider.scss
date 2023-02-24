@@ -1,0 +1,35 @@
+.Slider {
+  height: max-content;
+  padding: 60px 0px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.swiper {
+  width: calc(70% + 5%);
+  height: max-content;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: aqua;
+  .swiper-slide {
+    width: max-content;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 540px) {
+  .swiper {
+    width: 100%;
+    .swiper-button-prev {
+      display: none;
+    }
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
